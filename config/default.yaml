@@ -1,0 +1,3 @@
+hello:
+  requeue-reconcile-after: 10s
+  requeue-error-after: 10s

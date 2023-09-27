@@ -1,0 +1,28 @@
+[package]
+name          = "hello-rs-k8s"
+version       = "0.1.0"
+description   = "k8s operator deploying hello-rs"
+edition       = "2021"
+authors       = [ "Heiko Seeberger <git@heikoseeberger.de>" ]
+license       = "Apache-2.0"
+readme        = "README.md"
+homepage      = "https://github.com/hseeberger/hello-rs-k8s"
+repository    = "https://github.com/hseeberger/hello-rs-k8s"
+documentation = "https://github.com/hseeberger/hello-rs-k8s"
+publish       = false
+
+[dependencies]
+anyhow             = { version = "1.0", features = [ "backtrace" ] }
+configured         = { version = "0.5" }
+futures            = { version = "0.3" }
+humantime-serde    = { version = "1.1" }
+k8s-openapi        = { version = "0", features = [ "v1_27" ] }
+kube               = { version = "0", features = [ "derive", "runtime" ] }
+schemars           = { version = "0" }
+serde              = { version = "1.0", features = [ "derive" ] }
+serde_json         = { version = "1.0" }
+serde_yaml         = { version = "0" }
+thiserror          = { version = "1.0" }
+tokio              = { version = "1", features = [ "macros", "rt-multi-thread" ] }
+tracing            = { version = "0.1", default-features = false }
+tracing-subscriber = { version = "0.3", default-features = false, features = [ "env-filter", "fmt", "json" ] }

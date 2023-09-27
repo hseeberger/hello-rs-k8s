@@ -1,0 +1,7 @@
+apiVersion: hello.heikoseeberger.de/v0
+kind: Hello
+metadata:
+  name: hello-1
+  namespace: default
+spec:
+  replicas: 2
